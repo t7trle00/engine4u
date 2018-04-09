@@ -119,7 +119,7 @@ public function delete_listing($carID)
   // $cover_photo = $this->input->post('cover_photo') ;
   $success_1 = $this->Host_model->get_delete_images($carID) ;
   $cover_photo = $this->input->post('cover_photo') ;
-  $success_2 = $this->Host_model->get_delete_listing($carID,$cover_photo) ;
+  $success_2 = $this->Host_model->get_delete_listing($carID) ;
   if($success_1 && $success_2)
   {
     $data['message'] = 'Your listing has been deleted.'.$cover_photo ;
